@@ -1,0 +1,31 @@
+/* bugSolution.css */
+/* Correct usage of calc() */
+.container {
+  width: calc(100% - 20px);
+  /* Correct: Units are consistent */
+}
+
+.element {
+  width: calc((100% - 20px) / 2);
+  /* Correct: Parentheses ensure correct order of operations */
+}
+
+.item {
+  height: calc(100vh - 50px);
+  /* Correct: Use vh unit for viewport height */
+}
+
+/* Addressing older browser compatibility (optional): */
+.element {
+  width: -webkit-calc((100% - 20px) / 2);
+  width: calc((100% - 20px) / 2); /* standard calc */
+}
+
+/* Avoid */
+/*.incorrect {
+  width: calc(100% - 20); /* Incorrect: Missing unit */
+}*/
+
+/*.incorrect2 {
+  width: calc(100% - calc(50% + 10px)); /*Incorrect nesting leading to potential evaluation issues*/
+}*/
